@@ -9,3 +9,5 @@ reactDOM.render(
   </React.StrictMode>,
   document.getElementById("root")
 );
+
+//manifest.json é utilizado quando se trabalha com TWA(geração de ícones para a aplicação)/ funciona com app nativo
