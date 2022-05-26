@@ -1,7 +1,7 @@
 import React from "react";
 import reactDOM from "react-dom/client"; // react-dom não suportado na versão 18, utilizar "createRoot" e colocar o /client nessa linha
-import Home from "./components/Home";
-import "./components/Index.css"; //Tem que ser com a primeira letra maiúscula, sempre, SEMPRE
+import Home from "./views/Home/Home";
+import "./components/assets/styles/main.css"; //Tem que ser com a primeira letra maiúscula, sempre, SEMPRE
 
 const root = reactDOM.createRoot(document.getElementById('root'));
 // adciona essa linha de código, para criar o root e utilizar para redenrização, e não o "reactDOM"
