@@ -1,16 +1,16 @@
 import "../PaletaListaItem/PaletaListaItem";
 
-function PaletaListaItem({paleta, quantidadeSelecionada, index}) {
+function PaletaListaItem({paleta, quantidadeSelecionada, index, onRemove, onAdd}) {
 
     const badgeCounter = (canRender, Index) => {
         Boolean(canRender) && (
           <span className="PaletaListaItem__badge"> {quantidadeSelecionada}</span>
-        );
+);
       };
       
       const removeButton = (canRender, Index) => {
         Boolean(canRender) && (
-          <button className="Acoes__remover" onClick="{() => removerItem[index]}">
+          <button className="Acoes__remover" onClick={() => onRemove[index]}>
             Remover
           </button>
         );
@@ -35,7 +35,7 @@ function PaletaListaItem({paleta, quantidadeSelecionada, index}) {
               className={`Acoes__adicionar ${
                 !quantidadeSelecionada && "Acoes__adicionar-_preencher"
               }`}
-              onClick={() => quantidadeSelecionada}
+              onClick={() => onAdd[index]}
             >
               {removeButton(quantidadeSelecionada)}
               {/*{removeButton(paletaSelecionada[index], index)} // erro dnv*/}
