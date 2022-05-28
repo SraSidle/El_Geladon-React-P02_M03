@@ -20,7 +20,7 @@ Para esse projeto, foram utilizadas as ferramentas abaixo:
     JavaScript
  
  <div style="display: flex" width="5rem">
-    <img width="60" height="60" src="" alt="logo do React">
+    <img width="60" height="60" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="logo do React">
     <img width="60" height="60" src="https://img.icons8.com/color/48/000000/html-5--v2.png" alt="logo do HTML"> 
     <img width="60" height="60" src="https://img.icons8.com/color/48/000000/css3.png" alt="logo do CSS"/>
     <img width="60" height="60" src="https://img.icons8.com/color/48/000000/javascript--v1.png" alt="logo do JavaScript"/>
