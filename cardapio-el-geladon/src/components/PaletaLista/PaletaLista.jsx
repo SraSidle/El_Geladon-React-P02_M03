@@ -7,12 +7,11 @@ function PaletaLista() {
   const { paletaSelecionada, setPaletaSelecionada } = useState({});
 
   const adicionarItem = (paletaIndex) => {
+    console.log(paletaIndex);
     const paleta = {
-      [paletaIndex]: Number(paletaSelecionada[paletaIndex]) + 1,
+      [paletaIndex]: Number(paletaSelecionada[paletaIndex] || 0) + 1,
     };
     setPaletaSelecionada({ ...paletaSelecionada, ...paleta });
-
-    return;
   };
 
   const removerItem = (paletaIndex) => {
@@ -20,8 +19,6 @@ function PaletaLista() {
       [paletaIndex]: Number(paletaSelecionada[paletaIndex]) - 1,
     };
     setPaletaSelecionada({ ...paletaSelecionada, ...paleta });
-
-    return;
   };
 
   return (
@@ -32,9 +29,9 @@ function PaletaLista() {
           paleta={paleta}
           quantidadeSelecionada={paletaSelecionada[index]}
           index={index}
-          onRemove={index => removerItem(index)}
-          onAdd={index => adicionarItem(index)}
-          />
+          onRemove={(index) => removerItem(index)}
+          onAdd={(index) => adicionarItem(index)}
+        />
       ))}
       ;
     </div>
