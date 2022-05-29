@@ -4,23 +4,27 @@ import "./PaletaLista.css";
 import PaletaListaItem from "../PaletaListaItem/PaletaListaItem";
 
 function PaletaLista() {
-  const { paletaSelecionada, setPaletaSelecionada } = useState({});
+  const [paletaSelecionada, setPaletaSelecionada] = useState({}); // tinha um erro aqui, estava entre chaves e não entre colchetes
 
   const adicionarItem = (paletaIndex) => {
-    console.log(paletaIndex);
     const paleta = {
       [paletaIndex]: Number(paletaSelecionada[paletaIndex] || 0) + 1,
     };
     setPaletaSelecionada({ ...paletaSelecionada, ...paleta });
+
+    return
   };
 
   const removerItem = (paletaIndex) => {
     const paleta = {
-      [paletaIndex]: Number(paletaSelecionada[paletaIndex]) - 1,
+      [paletaIndex]: Number(paletaSelecionada[paletaIndex]) - 1, // não precisava do "|| 0" pq esse não aparece quando o valor é igual a 0
     };
-    setPaletaSelecionada({ ...paletaSelecionada, ...paleta });
-  };
 
+    setPaletaSelecionada({ ...paletaSelecionada, ...paleta });
+
+    return
+  };
+  
   return (
     <div className="PaletaLista">
       {paletas.map((paleta, index) => (
@@ -29,8 +33,8 @@ function PaletaLista() {
           paleta={paleta}
           quantidadeSelecionada={paletaSelecionada[index]}
           index={index}
-          onRemove={(index) => removerItem(index)}
-          onAdd={(index) => adicionarItem(index)}
+          removerItem={removerItem} 
+          adicionarItem={adicionarItem}
         />
       ))}
       ;
