@@ -7,6 +7,6 @@ html {
   width: 100%;
   min-height: 100vh;
   overflow: auto;
-  background-color: rgb(53, 139, 190);
-  font-family: sans-serif;
+  background-color: #be1ed2f2;
+  font-family: 'Exo' , sans-serif;
 }
