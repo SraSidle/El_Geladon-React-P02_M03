@@ -9,7 +9,6 @@ function PaletaListaItem({
   adicionarItem,
   removerItem,
 }) {
-
   const badgeCounter = (canRender, index) => {
     return (
       <>
@@ -32,7 +31,7 @@ function PaletaListaItem({
       )}
     </>
   );
-  
+
   return (
     <div className="PaletaListaItem">
       {badgeCounter(quantidadeSelecionada, index)}
