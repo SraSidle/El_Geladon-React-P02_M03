@@ -1,7 +1,7 @@
 .PaletaLista{
     display: grid;
     grid-template-columns:repeat(3, 1fr);
-    grid-gap: 25px 10px;
+    grid-gap: 3rem 2.5rem;
 }
 
 @media(max-width: 1220px){
